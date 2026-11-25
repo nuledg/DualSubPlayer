@@ -37,8 +37,9 @@ class SentenceSeekTest {
         ))
 
         assertEquals(8_000L, SentenceSeek.replayBeforePauseTarget(list, 9_000, 5_000))
-        assertEquals(5_000L, SentenceSeek.replayBeforePauseTarget(list, 10_500, 5_000))
-        assertNull(SentenceSeek.replayBeforePauseTarget(list, 11_001, 5_000))
+        assertEquals(8_000L, SentenceSeek.replayBeforePauseTarget(list, 10_500, 5_000))
+        assertEquals(8_000L, SentenceSeek.replayBeforePauseTarget(list, 11_001, 5_000))
+        assertNull(SentenceSeek.replayBeforePauseTarget(list, 15_001, 5_000))
     }
 
 
